@@ -1,0 +1,67 @@
+---
+import Layout from "@/layouts/Layout.astro"
+
+import AboutMe from "@/components/AboutMe.astro"
+import Briefcase from "@/components/icons/Briefcase.astro"
+import CodeIcon from "@/components/icons/Code.astro"
+import Experience from "@/components/Experience.astro"
+import ProfileCheck from "@/components/icons/ProfileCheck.astro"
+import Projects from "@/components/Projects.astro"
+import SectionContainer from "@/components/SectionContainer.astro"
+import Hero from "@/components/Hero.astro"
+import TitleSection from "@/components/TitleSection.astro"
+---
+
+<Layout
+  title="Porfolio de Abdul - Programador de aplicaciones multiplataforma"
+  description=""
+>
+  <main class="px-4">
+    <SectionContainer class="py-16 md:py-36">
+      <Hero>
+      </slot>
+    </Hero>
+    </SectionContainer>
+    <div class="space-y-24">
+    <SectionContainer id="experiencia">
+      <TitleSection>
+        <Briefcase class="size-8" />
+        Educacion
+      </TitleSection>
+      <Experience />
+    </SectionContainer>
+
+    <SectionContainer id="proyectos">
+      <TitleSection>
+        <CodeIcon class="size-8" />
+        Mis Proyectos
+      </TitleSection>
+    
+      <div class="space-y-6 mb-8">
+        <h3 class="text-2xl font-semibold">Applicación para comprar suplementos</h3>
+        
+        <!-- Video del Proyecto desde YouTube -->
+        <div class="w-full md:w-2/3 mx-auto">
+          <iframe
+            class="w-full rounded-lg shadow-lg"
+            height="315"
+            src="https://youtu.be/FHNzbOFOzno"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+
+
+    
+
+    <SectionContainer id="sobre-mi">
+      <TitleSection>
+        <ProfileCheck class="size-8" />
+        Sobre mí
+      </TitleSection>
+      <AboutMe />
+    </SectionContainer>
+  </div>
+  </main>
+</Layout>
